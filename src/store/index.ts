@@ -1,6 +1,12 @@
-import { configureStore } from '@reduxjs/toolkit';
+import { create } from 'zustand'
 
-export default configureStore({
-  reducer: {
-  },
-});
+const useBearStore = create((set) => ({
+  bears: 0,
+  increasePopulation: () => set((state:any) => ({ bears: state.bears + 1 })),
+  removeAllBears: () => set({ bears: 0 }),
+}))
+
+
+export default {
+  useBearStore,
+}
