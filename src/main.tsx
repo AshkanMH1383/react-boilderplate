@@ -4,7 +4,13 @@ import { QueryClient , QueryClientProvider } from "react-query";
 
 import App from '@/App';
 import '@/assets/styles/main.scss'
+import i18n from '@/utils/i18n'; 
 
+
+    
+
+
+i18n.changeLanguage('fa_IR')
 
 const client = new QueryClient();
 
@@ -15,3 +21,4 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       </QueryClientProvider>
   </React.StrictMode>,
 )
+
